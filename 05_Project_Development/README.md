@@ -1,40 +1,43 @@
-# Project Development
+# # Project Development
 
 Project: Implement Client Script & UI Policy (Incident)
 
 ## Development Activities
 
-### Task 1: Create UI Policy
-A UI Policy named "High Impact Control" was created for the Incident table.
+### UI Policy Configuration
 
-Condition:
-Impact is 1 - High
+A UI Policy named "High Impact Control" was configured for the Incident table.
 
-The Assignment Group field was configured as mandatory when the condition is satisfied.
+The policy is triggered when:
 
-### Task 2: Configure UI Policy Action
-A UI Policy Action was created for the Urgency field.
+Impact = 1 - High
 
-Configuration:
-- Field: Urgency
-- Read-only: True
-- Visible: Unchanged
+The Assignment Group field is controlled through the associated UI Policy Action.
 
-### Task 3: Create onChange Client Script
-An onChange Client Script named "Auto set urgency for high impact" was created for the Impact field.
+### Urgency Field Control
 
-When Impact is changed to High, the Urgency field is automatically set to High.
+A UI Policy Action was configured for the Urgency field.
 
-### Task 4: Create onSubmit Client Script
-An onSubmit Client Script named "Prevent save if Assigned To missing" was created.
+The field is made read-only when the High Impact condition is active.
 
-For High Impact incidents, the script prevents submission when the Assigned To field is empty.
+### Automatic Urgency Update
 
-### Task 5: Create onCellEdit Client Script
-An onCellEdit Client Script named "Prevent state change via list edit" was created for the State field.
+An onChange Client Script was configured for the Impact field.
 
-It prevents direct State changes through list editing and asks the user to open the Incident record.
+When Impact is changed to High, the script sets Urgency to High automatically.
 
-## Development Result
+### Submission Validation
 
-All required UI Policies and Client Scripts were configured in the ServiceNow Incident module according to the project requirements.
+An onSubmit Client Script was created to check whether Assigned To has been provided for a High Impact Incident.
+
+If the required value is missing, submission is prevented.
+
+### State List Editing Control
+
+An onCellEdit Client Script was configured for the State field.
+
+It prevents users from changing the State directly through list editing and instructs them to open the Incident form.
+
+## Development Outcome
+
+The required UI Policies and Client Scripts were configured and integrated with the ServiceNow Incident module.
