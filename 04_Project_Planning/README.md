@@ -1,32 +1,32 @@
-# Project Planning
+# # Project Planning
 
 Project: Implement Client Script & UI Policy (Incident)
 
-## Project Plan
+## Implementation Plan
 
-The project is planned in the following stages:
+The project will be completed through the following activities:
 
-1. Create the High Impact Control UI Policy.
-2. Configure the Assignment Group as mandatory when Impact is High.
-3. Configure the Urgency field as read-only for High Impact incidents.
-4. Create an onChange Client Script to automatically set Urgency to High.
-5. Create an onSubmit Client Script to prevent saving when Assigned To is empty for High Impact incidents.
-6. Create an onCellEdit Client Script to prevent State changes through list editing.
-7. Test all configured UI Policies and Client Scripts.
-8. Verify successful form-based updates and reverse conditions.
-9. Capture screenshots of the configuration and testing results.
-10. Organize the project evidence phase-wise in the GitHub repository.
+1. Configure the High Impact Control UI Policy.
+2. Set Assignment Group as mandatory under the required condition.
+3. Configure the Urgency UI Policy Action.
+4. Develop the onChange Client Script for automatic Urgency assignment.
+5. Develop the onSubmit Client Script for Assigned To validation.
+6. Develop the onCellEdit Client Script for State control.
+7. Perform functional testing on Incident records.
+8. Verify the reverse condition for non-High Impact Incidents.
+9. Verify both list-based and form-based State updates.
+10. Capture screenshots of configuration and testing.
 
-## Testing Plan
+## Testing Approach
 
-The configuration will be tested for:
+The implementation will be checked using:
 
-- Mandatory field enforcement
-- Successful Incident save
-- Reverse condition when Impact changes from High to Medium
-- Blocking State changes through list editing
-- Allowing State changes through the Incident form
+- High Impact Incident with missing required information
+- Valid High Impact Incident
+- Change from High Impact to Medium Impact
+- Direct State editing from the Incident list
+- State modification through the Incident form
 
-## Expected Outcome
+## Expected Result
 
-The project should provide dynamic field control, automatic field updates, validation during submission, and controlled State updates in the ServiceNow Incident module.
+The completed configuration should provide controlled field behavior and validation within the ServiceNow Incident module.
