@@ -1,30 +1,30 @@
-# Project Documentation
+# # Project Documentation
 
 Project: Implement Client Script & UI Policy (Incident)
 
-## Configuration Evidence
+## Configuration Documentation
 
-The project implementation was documented using screenshots of the configured ServiceNow components.
+The project implementation is documented through screenshots showing the ServiceNow configuration.
 
-The documented components include:
+The evidence covers:
 
-1. High Impact Control UI Policy
-2. Assignment Group UI Policy Action
-3. Urgency UI Policy Action
-4. Auto set urgency for high impact – onChange Client Script
-5. Prevent save if Assigned To missing – onSubmit Client Script
-6. Prevent state change via list edit – onCellEdit Client Script
+- High Impact Control UI Policy
+- Assignment Group UI Policy Action
+- Urgency UI Policy Action
+- onChange Client Script
+- onSubmit Client Script
+- onCellEdit Client Script
 
-## Testing Evidence
+## Testing Documentation
 
-Screenshots were captured for the following testing activities:
+Screenshots are included to demonstrate:
 
-- Mandatory enforcement
-- Successful Incident save
-- Reverse condition
-- List edit blocking
-- Form-based State update
+1. Mandatory field validation
+2. Successful Incident submission
+3. Reverse condition behavior
+4. State list-edit restriction
+5. Form-based State update
 
 ## Documentation Purpose
 
-The screenshots provide evidence of the project configuration and its working behavior in the ServiceNow Incident module.
+The collected evidence demonstrates that the configured ServiceNow components were created and tested according to the project requirements.
