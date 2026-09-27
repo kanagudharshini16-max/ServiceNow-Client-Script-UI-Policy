@@ -2,31 +2,37 @@
 
 Project: Implement Client Script & UI Policy (Incident)
 
-## Design Overview
+## Design Concept
 
-The project uses ServiceNow Incident Management to control incident form behavior based on the Impact field.
+The project is designed around the Impact field of an Incident. When the Impact value is High, specific field controls and validation rules are activated.
 
-## Main Components
+## Components Used
 
-1. UI Policy – High Impact Control
-2. UI Policy Action – Assignment Group
-3. UI Policy Action – Urgency
-4. onChange Client Script – Automatically sets Urgency to High
-5. onSubmit Client Script – Prevents saving when Assigned To is empty
-6. onCellEdit Client Script – Prevents State changes through list editing
+### 1. UI Policy
+High Impact Control is used to apply conditional behavior to Incident fields.
 
-## Working Flow
+### 2. UI Policy Actions
+UI Policy Actions control the mandatory and read-only properties of selected fields.
 
-Impact = High
-        ↓
-UI Policy is triggered
-        ↓
-Assignment Group becomes mandatory
-        ↓
-Urgency becomes read-only
-        ↓
-Urgency is automatically set to High
-        ↓
-Assigned To is checked before saving
-        ↓
-Incident is saved only when the required condition is satisfied
+### 3. onChange Client Script
+This script responds when the Impact field is changed and automatically updates Urgency.
+
+### 4. onSubmit Client Script
+This script validates the Assigned To field before an Incident is submitted.
+
+### 5. onCellEdit Client Script
+This script prevents direct State modification from the Incident list.
+
+## Basic Flow
+
+Impact changed
+↓
+Condition is checked
+↓
+Field behavior is applied
+↓
+Urgency is updated when required
+↓
+Submission is validated
+↓
+Incident is saved or rejected according to the conditions
